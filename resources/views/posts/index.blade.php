@@ -9,6 +9,20 @@
 
 <body>
   <h1>投稿一覧</h1>
+
+  <table border="1" cellpadding="10">
+       <tr>
+           <th>タイトル</th>
+           <th>本文</th>
+       </tr>
+       @foreach($posts as $post)
+           <tr>
+               <td>{{ $post->title }}</td>
+               <td>{{ $post->content }}</td>
+           </tr>            
+       @endforeach       
+   </table>
+
 </body>
 
 </html>
